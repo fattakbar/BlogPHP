@@ -25,6 +25,30 @@
         <?php include("menu.php"); ?>
     </nav>
 
+    <article>
+        <div class="container wrap">
+            <div class="row">
+                <div class="col-md-12">
+                    <?php
+
+                        $query = mysqli_query($koneksi, "SELECT * FROM artikel ORDER BY tanggal DESC");
+                        while($artikel = mysqli_fetch_array($query)){
+                            echo "<div class='artikel-kop'>";
+                            echo "<h2><b>".$artikel['judul']."</b></h2>";
+                            echo "<p class='artikel-tanggal'>Oleh <b>".$artikel['penulis']."</b>, pada ".$artikel['tanggal']."</p>";
+                            echo "</div>";
+                            echo "<div class='artikel-isi'>";
+                            echo substr($artikel['isi'], 0, 255);
+                            echo " [<a href='artikel.php?id=".$artikel['id']."' />Lanjut Baca...</a>]";
+                            echo "</div><hr/>";
+                        }
+
+                    ?>
+                </div>
+            </div>
+        </div>
+    </article>
+
     <footer>
         <?php include("footer.php"); ?>
     </footer>
