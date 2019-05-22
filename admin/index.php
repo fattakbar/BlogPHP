@@ -18,7 +18,9 @@
     <link href="../font-awesome/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
-    <nav></nav>
+    <nav>
+        <?php include("navbar.php"); ?>
+    </nav>
 </body>
 </html>
 
