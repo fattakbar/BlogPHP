@@ -21,6 +21,10 @@
         <?php include("header.php"); ?>
     </header>
 
+    <nav class="navbar navbar-default">
+        <?php include("menu.php"); ?>
+    </nav>
+
     <footer>
         <?php include("footer.php"); ?>
     </footer>
