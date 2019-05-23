@@ -21,6 +21,21 @@
     <nav>
         <?php include("navbar.php"); ?>
     </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <aside>
+                <?php $home = "class='active'"; ?>
+                <?php include('aside.php'); ?>
+            </aside>
+            <section id="konten">
+                <?php include('home.php'); ?>
+          </section>
+        </div>
+    </div>
+    <script src="../bootstrap/js/jquery.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../bootstrap/js/holder.js"></script>
 </body>
 </html>
 
